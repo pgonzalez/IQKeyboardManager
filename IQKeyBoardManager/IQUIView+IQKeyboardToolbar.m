@@ -154,12 +154,13 @@ NSString const *IQ_shouldHideTitleKey = @"IQ_shouldHideTitle";
     }
     
     //  Create a fake button to maintain flexibleSpace between doneButton and nilButton. (Actually it moves done button to right side.
-    //UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Listo" style:UIBarButtonItemStyleDone target:target action:action];
+    IQBarButtonItem *nilButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     [items addObject:nilButton];
     
     //  Create a done button to show on keyboard to resign it. Adding a selector to resign it.
-    IQBarButtonItem *doneButton = [[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
+    //IQBarButtonItem *doneButton = [[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:action];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Listo" style:UIBarButtonItemStyleDone target:target action:action];
+
     [items addObject:doneButton];
     
     //  Adding button to toolBar.
@@ -389,8 +390,10 @@ NSString const *IQ_shouldHideTitleKey = @"IQ_shouldHideTitle";
     }
     
     IQBarButtonItem *nilButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    
+    IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
+
 	[items addObject:nilButton];
+	
 	[items addObject:doneButton];
 	
     //  Adding button to toolBar.
