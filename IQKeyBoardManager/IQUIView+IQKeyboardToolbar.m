@@ -390,7 +390,6 @@ NSString const *IQ_shouldHideTitleKey = @"IQ_shouldHideTitle";
     }
     
     IQBarButtonItem *nilButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    IQBarButtonItem *doneButton =[[IQBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:target action:doneAction];
 
 	[items addObject:nilButton];
 	
